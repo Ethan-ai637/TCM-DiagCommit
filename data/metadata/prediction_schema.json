@@ -1,0 +1,21 @@
+{
+  "top1": "one syndrome copied exactly from candidate_syndromes",
+  "top3": [
+    [
+      "syndrome",
+      0.0
+    ],
+    [
+      "syndrome",
+      0.0
+    ],
+    [
+      "syndrome",
+      0.0
+    ]
+  ],
+  "confidence": "0.0-1.0",
+  "reason": "brief evidence-grounded rationale",
+  "action": "commit/acquire/defer/abstain",
+  "need_more_evidence": "boolean"
+}

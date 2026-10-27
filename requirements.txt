@@ -1,0 +1,2 @@
+# TCM-DiagCommit evaluation code uses only the Python standard library.
+# Tested with Python 3.8 and later.

@@ -1,0 +1,41 @@
+{
+  "benchmark_name": "TCM-DiagCommit",
+  "version": "1.0.0",
+  "description": "Evidence-conditioned TCM syndrome selection and commitment benchmark, derived from TCM-SD / ZY-BERT.",
+  "source_cases": 1834,
+  "syndrome_labels": 148,
+  "splits": {
+    "dev": { "cases": 919, "task_rows": 11947 },
+    "test": { "cases": 915, "task_rows": 11895 }
+  },
+  "task_rows_total": 23842,
+  "task_files_total": 26,
+  "data_dir": "data",
+  "staged_evidence": {
+    "t1": "chief complaint only",
+    "t2": "chief complaint + description/history",
+    "t3": "t2 + detection (inspection, tongue/pulse)"
+  },
+  "task_families": {
+    "hard_syndrome_differentiation": [
+      "random10", "hard10", "hard20", "full148"
+    ],
+    "diagnostic_commitment_control": [
+      "insufficient_t1_hard10", "insufficient_t1_hard20",
+      "insufficient_t2_hard10", "insufficient_t2_hard20"
+    ],
+    "counterfactual_evidence_sensitivity": [
+      "tongue_pulse_swap_hard10"
+    ],
+    "shortcut_and_evidence_ablation_control": [
+      "candidate_only_hard10", "chief_only_hard10",
+      "no_tongue_pulse_hard10", "tongue_pulse_only_hard10"
+    ]
+  },
+  "prediction_schema": "data/metadata/prediction_schema.json",
+  "task_manifest": "data/metadata/task_manifest.json",
+  "license": {
+    "code": "MIT",
+    "data": "CC BY 4.0"
+  }
+}
