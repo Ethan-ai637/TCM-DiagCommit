@@ -6,6 +6,23 @@ Erwei Hou and Yue Hu
 Beijing University of Posts and Telecommunications, Beijing, China  
 {houerwei, huyue2023}@bupt.edu.cn
 
+<p align="center">
+  <img src="figures/overview.png" width="100%" alt="Overview of the TCM-DiagCommit benchmark">
+</p>
+<p align="center">
+  <em><b>Figure 1.</b> Overview of the TCM-DiagCommit benchmark. <b>(1)</b> Evaluating syndrome
+  differentiation as one-shot final-label selection hides three diagnostic behaviors: separating
+  semantic-neighbor syndromes from easy distractors, updating predictions as evidence is revealed,
+  and committing or deferring under uncertainty. <b>(2)</b> The benchmark is derived from
+  TCM-SD / ZY-BERT (54,152 records, 148 syndrome labels) into staged evidence views (t1/t2/t3),
+  candidate ladders (random10 / hard10/20 / full148), and further variants, yielding 23,842 paired
+  evaluation rows. <b>(3)</b> Each prediction reports one action (commit, acquire, defer, abstain)
+  and is scored by a policy-aware Expected Cost. <b>(4)</b> The release pairs 1,834 source cases
+  (919 dev / 915 test) into 26 task files. <b>(5)</b> Representative cases illustrate
+  candidate-ladder stress, evidence repair, and the commitment trap. <b>(6)</b> Task families,
+  candidate counts, and the capability gap each family targets.</em>
+</p>
+
 ## Overview
 
 TCM-DiagCommit evaluates how a model performs evidence-conditioned diagnostic
@@ -73,6 +90,8 @@ TCM-DiagCommit/
 ├── LICENSE-DATA.md              # CC BY 4.0 (dataset)
 ├── configs/
 │   └── benchmark_config.json    # release metadata and variant map
+├── figures/
+│   └── overview.png             # Figure 1, benchmark overview
 ├── data/
 │   ├── dev/                     # 13 task variants + source, 919 cases
 │   ├── test/                    # 13 task variants + source, 915 cases
